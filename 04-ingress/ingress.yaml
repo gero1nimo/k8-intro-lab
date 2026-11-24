@@ -1,4 +1,4 @@
-# Slayt: "Ingress". ingress-nginx kurulu olmalı (README'deki komut). Service adı: web (03-service).
+# Slide: "Ingress". ingress-nginx must be installed (see README). Backend Service: web (03-service).
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:

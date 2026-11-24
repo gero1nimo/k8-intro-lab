@@ -1,4 +1,4 @@
-# Tek node'lu kind kümesi. Ingress (04) için 80/443 portları host'a açılır.
+# Single-node kind cluster. Ports 80/443 are mapped to the host for Ingress (04).
 kind: Cluster
 apiVersion: kind.x-k8s.io/v1alpha4
 name: lab

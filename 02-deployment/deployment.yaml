@@ -1,4 +1,4 @@
-# Slaytlar: "Deployment" ve "Deployment YAML". Container adı nginx: set image komutu buna göre yazılır.
+# Slides: "Deployment" and "Deployment YAML". The container is named nginx, which the set image commands rely on.
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -9,11 +9,11 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      app: web          # Deployment hangi Pod'ları yönetir
+      app: web          # which Pods this Deployment manages
   template:
     metadata:
       labels:
-        app: web        # selector ile BİREBİR aynı olmalı
+        app: web        # must match the selector EXACTLY
     spec:
       containers:
         - name: nginx

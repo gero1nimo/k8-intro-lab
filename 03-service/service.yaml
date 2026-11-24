@@ -1,4 +1,4 @@
-# Slayt: "Service". selector, Deployment'taki Pod etiketiyle eşleşmeli (app: web).
+# Slide: "Service". The selector must match the Pod labels of the Deployment (app: web).
 apiVersion: v1
 kind: Service
 metadata:
@@ -8,5 +8,5 @@ spec:
   selector:
     app: web
   ports:
-    - port: 80          # Service'in portu
-      targetPort: 80    # container'ın portu
+    - port: 80          # the Service's port
+      targetPort: 80    # the container's port

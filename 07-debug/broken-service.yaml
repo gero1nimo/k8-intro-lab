@@ -1,5 +1,5 @@
-# Belirti: Service var ama endpoints boş. Neden: selector "wbe" (yazım hatası), Pod etiketi "web".
-# Kontrol: kubectl get endpoints broken-svc   Çözüm: selector'ı app: web yap.
+# Symptom: the Service exists but its endpoints are empty. Cause: selector "wbe" (typo) vs Pod label "web".
+# Check: kubectl get endpoints broken-svc   Fix: set the selector to app: web.
 apiVersion: v1
 kind: Service
 metadata:

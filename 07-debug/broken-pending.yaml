@@ -1,4 +1,4 @@
-# Belirti: STATUS Pending. describe -> Events: Insufficient cpu. Çözüm: request'i küçült.
+# Symptom: STATUS Pending. describe -> Events: Insufficient cpu. Fix: lower the request.
 apiVersion: v1
 kind: Pod
 metadata:

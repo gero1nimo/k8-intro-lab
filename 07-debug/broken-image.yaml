@@ -1,4 +1,4 @@
-# Belirti: ErrImagePull / ImagePullBackOff. Çözüm: image adını/etiketini düzelt.
+# Symptom: ErrImagePull / ImagePullBackOff. Fix: correct the image name or tag.
 apiVersion: v1
 kind: Pod
 metadata:

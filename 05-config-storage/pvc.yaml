@@ -1,4 +1,4 @@
-# Slayt: "Storage" - PVC bir depolama talebidir. kind'ın varsayılan StorageClass'ı kullanılır.
+# Slide: "Storage" - a PVC is a request for storage. kind's default StorageClass is used.
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:

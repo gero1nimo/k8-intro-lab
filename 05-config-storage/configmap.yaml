@@ -1,4 +1,4 @@
-# Slayt: "ConfigMap" - ayarı imajdan ayırır.
+# Slide: "ConfigMap" - separates configuration from the image.
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -7,4 +7,4 @@ data:
   REDIS_HOST: cache
   APP_MODE: lab
   index.html: |
-    <h1>Merhaba, bu sayfa bir ConfigMap'ten geliyor</h1>
+    <h1>Hello, this page comes from a ConfigMap</h1>

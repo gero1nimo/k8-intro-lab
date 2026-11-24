@@ -1,4 +1,4 @@
-# Slayt: "Probes" - readiness: trafik almaya hazır mı? liveness: hâlâ yaşıyor mu?
+# Slide: "Probes" - readiness: ready for traffic? liveness: still alive?
 apiVersion: v1
 kind: Pod
 metadata:

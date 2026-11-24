@@ -1,4 +1,4 @@
-# Slayt: "Namespaces ve kaynaklar".
+# Slide: "Namespaces and resources".
 apiVersion: v1
 kind: Namespace
 metadata:

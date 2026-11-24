@@ -1,4 +1,4 @@
-# PVC'ye dosya yazar. Pod silinse de veri kalır (README'deki adımlara bak).
+# Writes a file to the PVC. The data survives Pod deletion (see the README steps).
 apiVersion: v1
 kind: Pod
 metadata:

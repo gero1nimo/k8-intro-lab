@@ -1,4 +1,4 @@
-# Slayt: "Pod" - en küçük çalışan birim. Kendi başına Pod'u kimse yeniden başlatmaz.
+# Slide: "Pod" - the smallest runnable unit. Nobody recreates a bare Pod once it is deleted.
 apiVersion: v1
 kind: Pod
 metadata:

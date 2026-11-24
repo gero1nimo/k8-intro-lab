@@ -1,4 +1,4 @@
-# Liveness probe bilerek başarısız olur: container tekrar tekrar yeniden başlatılır (RESTARTS artar).
+# The liveness probe fails on purpose: the container is restarted again and again (RESTARTS grows).
 apiVersion: v1
 kind: Pod
 metadata:

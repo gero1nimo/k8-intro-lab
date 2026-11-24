@@ -1,4 +1,4 @@
-# Karşılaştırma için NodePort: küme dışından node portu üzerinden erişim.
+# NodePort for comparison: reachable from outside the cluster through a node port.
 apiVersion: v1
 kind: Service
 metadata:

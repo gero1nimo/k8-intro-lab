@@ -1,4 +1,4 @@
-# Belirti: CrashLoopBackOff. Bakılacak yer: kubectl logs broken-crash --previous
+# Symptom: CrashLoopBackOff. Where to look: kubectl logs broken-crash --previous
 apiVersion: v1
 kind: Pod
 metadata:
@@ -7,4 +7,4 @@ spec:
   containers:
     - name: app
       image: busybox:1.36
-      command: ["sh", "-c", "echo 'veritabanına bağlanamadım'; exit 1"]
+      command: ["sh", "-c", "echo 'could not connect to the database'; exit 1"]

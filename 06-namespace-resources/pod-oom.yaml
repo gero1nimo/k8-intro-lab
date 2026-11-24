@@ -1,4 +1,4 @@
-# Memory limitini aşan Pod: OOMKilled (kubectl describe pod oom).
+# A Pod that exceeds its memory limit: OOMKilled (kubectl describe pod oom).
 apiVersion: v1
 kind: Pod
 metadata:
