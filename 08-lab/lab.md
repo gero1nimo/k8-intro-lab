@@ -4,7 +4,7 @@ Replace `POD_NAME` with the real name from `kubectl get pods`.
 
 | Step | Command | Expected |
 |---|---|---|
-| 1 · Cluster | `make cluster` | `kubectl get nodes` shows Ready |
+| 1 · Cluster | `kind create cluster --config 00-setup/kind-config.yaml` | `kubectl get nodes` shows Ready |
 | 2 · Deploy | `kubectl create deployment web --image=nginx:1.27-alpine` | `deployment.apps/web created` |
 | 3 · Expose | `kubectl expose deployment web --port=80` | `kubectl get svc web` |
 | 4 · Reach it | `kubectl port-forward svc/web 8080:80` | the nginx page at localhost:8080 |

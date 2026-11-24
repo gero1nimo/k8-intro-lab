@@ -8,7 +8,7 @@ Runnable examples for the "Introduction to Kubernetes" slide deck (44 slides). E
 
 ## Quick start
 ```bash
-make cluster                     # kind create cluster --config 00-setup/kind-config.yaml
+kind create cluster --config 00-setup/kind-config.yaml
 kubectl get nodes                # STATUS: Ready
 kubectl config current-context   # kind-lab
 ```
@@ -69,7 +69,8 @@ kubectl port-forward svc/web 8080:80
 
 ### 04 · Ingress
 ```bash
-make ingress                            # installs ingress-nginx (manifest from the kind guide)
+kubectl apply -f https://kind.sigs.k8s.io/examples/ingress/deploy-ingress-nginx.yaml   # installs ingress-nginx (from the kind guide)
+kubectl wait --namespace ingress-nginx --for=condition=ready pod --selector=app.kubernetes.io/component=controller --timeout=120s
 kubectl apply -f 04-ingress/ingress.yaml
 curl -H "Host: shop.example.com" http://localhost/
 ```
@@ -108,8 +109,11 @@ All 8 steps from the deck: `08-lab/lab.md`.
 
 ## Clean up
 ```bash
-make clean-all
-kind delete cluster --name lab
+kubectl delete -f 04-ingress/ -f 03-service/ -f 02-deployment/ -f 01-pod/pod.yaml
+kubectl delete -f 05-config-storage/ -f 06-namespace-resources/namespace.yaml
+kubectl delete secret db-pw
+kubectl delete -f 07-debug/
+kind delete cluster --name lab   # removes the whole cluster, so the lines above are only needed to keep it
 ```
 
 ## Note
