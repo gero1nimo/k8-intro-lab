@@ -1,0 +1,9 @@
+# Belirti: ErrImagePull / ImagePullBackOff. Çözüm: image adını/etiketini düzelt.
+apiVersion: v1
+kind: Pod
+metadata:
+  name: broken-image
+spec:
+  containers:
+    - name: web
+      image: nginx:bu-etiket-yok

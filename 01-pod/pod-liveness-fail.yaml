@@ -1,0 +1,16 @@
+# Liveness probe bilerek başarısız olur: container tekrar tekrar yeniden başlatılır (RESTARTS artar).
+apiVersion: v1
+kind: Pod
+metadata:
+  name: liveness-fail
+spec:
+  containers:
+    - name: web
+      image: nginx:1.27-alpine
+      livenessProbe:
+        httpGet:
+          path: /yok-boyle-bir-yol
+          port: 80
+        initialDelaySeconds: 2
+        periodSeconds: 3
+        failureThreshold: 2

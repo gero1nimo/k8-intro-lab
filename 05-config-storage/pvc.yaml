@@ -1,0 +1,11 @@
+# Slayt: "Storage" - PVC bir depolama talebidir. kind'ın varsayılan StorageClass'ı kullanılır.
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: data
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 100Mi

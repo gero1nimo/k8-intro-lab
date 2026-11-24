@@ -1,0 +1,14 @@
+# Memory limitini aşan Pod: OOMKilled (kubectl describe pod oom).
+apiVersion: v1
+kind: Pod
+metadata:
+  name: oom
+spec:
+  containers:
+    - name: stress
+      image: polinux/stress
+      command: ["stress"]
+      args: ["--vm", "1", "--vm-bytes", "150M", "--vm-hang", "1"]
+      resources:
+        limits:
+          memory: 50Mi

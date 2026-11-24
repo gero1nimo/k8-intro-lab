@@ -1,0 +1,12 @@
+# Slayt: "Service". selector, Deployment'taki Pod etiketiyle eşleşmeli (app: web).
+apiVersion: v1
+kind: Service
+metadata:
+  name: web
+spec:
+  type: ClusterIP
+  selector:
+    app: web
+  ports:
+    - port: 80          # Service'in portu
+      targetPort: 80    # container'ın portu

@@ -1,0 +1,10 @@
+# Slayt: "ConfigMap" - ayarı imajdan ayırır.
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+data:
+  REDIS_HOST: cache
+  APP_MODE: lab
+  index.html: |
+    <h1>Merhaba, bu sayfa bir ConfigMap'ten geliyor</h1>

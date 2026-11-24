@@ -1,0 +1,17 @@
+# Slayt: "Namespaces ve kaynaklar".
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: dev
+---
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: dev-quota
+  namespace: dev
+spec:
+  hard:
+    pods: "4"
+    requests.cpu: "500m"
+    requests.memory: 256Mi
+    limits.memory: 512Mi

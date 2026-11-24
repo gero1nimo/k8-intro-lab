@@ -1,0 +1,18 @@
+# Slayt: "Ingress". ingress-nginx kurulu olmalı (README'deki komut). Service adı: web (03-service).
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: shop
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: shop.example.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: web
+                port:
+                  number: 80
